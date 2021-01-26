@@ -31,13 +31,12 @@
             this.lblv1 = new System.Windows.Forms.Label();
             this.lblv2 = new System.Windows.Forms.Label();
             this.lblopera = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtv1 = new System.Windows.Forms.TextBox();
+            this.txtv2 = new System.Windows.Forms.TextBox();
             this.cmdSuma = new System.Windows.Forms.Button();
             this.cmdResta = new System.Windows.Forms.Button();
             this.cmdMulti = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.cmdSalir = new System.Windows.Forms.Button();
+            this.cmdDiv = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -72,19 +71,19 @@
             this.lblopera.TabIndex = 2;
             this.lblopera.Text = "Operación";
             // 
-            // textBox1
+            // txtv1
             // 
-            this.textBox1.Location = new System.Drawing.Point(334, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtv1.Location = new System.Drawing.Point(334, 61);
+            this.txtv1.Name = "txtv1";
+            this.txtv1.Size = new System.Drawing.Size(89, 20);
+            this.txtv1.TabIndex = 4;
             // 
-            // textBox2
+            // txtv2
             // 
-            this.textBox2.Location = new System.Drawing.Point(334, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(89, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtv2.Location = new System.Drawing.Point(334, 117);
+            this.txtv2.Name = "txtv2";
+            this.txtv2.Size = new System.Drawing.Size(89, 20);
+            this.txtv2.TabIndex = 5;
             // 
             // cmdSuma
             // 
@@ -96,6 +95,7 @@
             this.cmdSuma.TabIndex = 6;
             this.cmdSuma.Text = "Suma";
             this.cmdSuma.UseVisualStyleBackColor = false;
+            this.cmdSuma.Click += new System.EventHandler(this.cmdSuma_Click);
             // 
             // cmdResta
             // 
@@ -108,6 +108,7 @@
             this.cmdResta.TabIndex = 7;
             this.cmdResta.Text = "Resta";
             this.cmdResta.UseVisualStyleBackColor = false;
+            this.cmdResta.Click += new System.EventHandler(this.cmdResta_Click);
             // 
             // cmdMulti
             // 
@@ -119,28 +120,19 @@
             this.cmdMulti.TabIndex = 8;
             this.cmdMulti.Text = "Multiplicación";
             this.cmdMulti.UseVisualStyleBackColor = false;
+            this.cmdMulti.Click += new System.EventHandler(this.cmdMulti_Click);
             // 
-            // button4
+            // cmdDiv
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button4.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(182, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 37);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "División";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // cmdSalir
-            // 
-            this.cmdSalir.BackColor = System.Drawing.Color.DarkOrchid;
-            this.cmdSalir.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalir.Location = new System.Drawing.Point(508, 379);
-            this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(120, 67);
-            this.cmdSalir.TabIndex = 10;
-            this.cmdSalir.Text = "Salir";
-            this.cmdSalir.UseVisualStyleBackColor = false;
+            this.cmdDiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cmdDiv.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDiv.Location = new System.Drawing.Point(182, 315);
+            this.cmdDiv.Name = "cmdDiv";
+            this.cmdDiv.Size = new System.Drawing.Size(160, 37);
+            this.cmdDiv.TabIndex = 9;
+            this.cmdDiv.Text = "División";
+            this.cmdDiv.UseVisualStyleBackColor = false;
+            this.cmdDiv.Click += new System.EventHandler(this.cmdDiv_Click);
             // 
             // lblResultado
             // 
@@ -160,13 +152,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(655, 458);
             this.Controls.Add(this.lblResultado);
-            this.Controls.Add(this.cmdSalir);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.cmdDiv);
             this.Controls.Add(this.cmdMulti);
             this.Controls.Add(this.cmdResta);
             this.Controls.Add(this.cmdSuma);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtv2);
+            this.Controls.Add(this.txtv1);
             this.Controls.Add(this.lblopera);
             this.Controls.Add(this.lblv2);
             this.Controls.Add(this.lblv1);
@@ -183,13 +174,12 @@
         private System.Windows.Forms.Label lblv1;
         private System.Windows.Forms.Label lblv2;
         private System.Windows.Forms.Label lblopera;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtv1;
+        private System.Windows.Forms.TextBox txtv2;
         private System.Windows.Forms.Button cmdSuma;
         private System.Windows.Forms.Button cmdResta;
         private System.Windows.Forms.Button cmdMulti;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button cmdSalir;
+        private System.Windows.Forms.Button cmdDiv;
         private System.Windows.Forms.Label lblResultado;
     }
 }
