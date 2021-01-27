@@ -49,6 +49,7 @@
             this.lblv1.Size = new System.Drawing.Size(114, 21);
             this.lblv1.TabIndex = 0;
             this.lblv1.Text = "Primer Valor";
+            this.lblv1.Click += new System.EventHandler(this.lblv1_Click);
             // 
             // lblv2
             // 
@@ -60,6 +61,7 @@
             this.lblv2.TabIndex = 1;
             this.lblv2.Text = "Segundo Valor";
             this.lblv2.Click += new System.EventHandler(this.label1_Click);
+            this.lblv2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblv2_MouseMove);
             // 
             // lblopera
             // 

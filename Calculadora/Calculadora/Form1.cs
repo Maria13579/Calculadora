@@ -42,6 +42,16 @@ namespace Calculadora
         {
             lblResultado.Text = op.Div(double.Parse(txtv1.Text), double.Parse(txtv2.Text)).ToString();
         }
+
+        private void lblv1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("valor 1");
+        }
+
+        private void lblv2_MouseMove(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("valor 2");
+        }
     }
   
 }
