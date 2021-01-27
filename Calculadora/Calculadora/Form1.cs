@@ -52,6 +52,16 @@ namespace Calculadora
         {
             MessageBox.Show("valor 2");
         }
+
+        private void lblopera_MouseDown(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Escoge la operacion");
+        }
+
+        private void lblResultado_MouseUp(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Resultado dado");
+        }
     }
   
 }

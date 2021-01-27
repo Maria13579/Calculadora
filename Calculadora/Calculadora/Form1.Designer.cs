@@ -72,6 +72,7 @@
             this.lblopera.Size = new System.Drawing.Size(122, 27);
             this.lblopera.TabIndex = 2;
             this.lblopera.Text = "Operación";
+            this.lblopera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblopera_MouseDown);
             // 
             // txtv1
             // 
@@ -146,6 +147,7 @@
             this.lblResultado.Size = new System.Drawing.Size(32, 36);
             this.lblResultado.TabIndex = 11;
             this.lblResultado.Text = "0";
+            this.lblResultado.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblResultado_MouseUp);
             // 
             // frmCalculadora
             // 
